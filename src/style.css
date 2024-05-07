@@ -1,0 +1,149 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 17.5rem 1fr;
+  grid-template-rows: 1fr;
+}
+
+.sm-bold-title {
+  font-size: 0.8rem;
+  color: white;
+  font-weight: bold;
+}
+.sm-light-title {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.md-bold-title {
+  font-size: 1.2rem;
+  color: white;
+}
+.lg-bold-title {
+  font-size: 2.2rem;
+  color: white;
+  font-weight: bold;
+}
+.icon-sb {
+  width: 1.2rem;
+}
+.dlt-btn {
+  position: absolute;
+  right: 1em;
+  top: 2em;
+}
+.edt-btn {
+  position: absolute;
+  right: 3em;
+  top: 2em;
+}
+
+.todo-container {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.todo-card {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 65%;
+  height: 6rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+.td-desc {
+  width: 50%;
+}
+.td-title {
+  width: 50%;
+}
+
+.vanish {
+  display: none;
+}
+.btn-operate {
+  margin-top: 0.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.proj-template {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.sideBar {
+  grid-column: 1 / 2;
+  background-color: #262626;
+}
+.account-section {
+  box-sizing: border-box;
+  display: flex;
+  height: 3.5rem;
+  padding: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-left-section {
+  display: flex;
+  height: 2rem;
+  width: 4.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.proj-section {
+  height: 10rem;
+  overflow-y: auto;
+}
+.content {
+  grid-column: 2 / 3;
+  background-color: #1e1e1e;
+}
+
+.td-content {
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.new-task-box {
+  position: absolute;
+  height: 30%;
+  width: 35%;
+  top: 10rem;
+  right: 30rem;
+  background-color: black;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.new-task-icon {
+  margin-top: 2rem;
+  background-color: #1e1e1e;
+  border: 2px solid #ffffff;
+  border-radius: 2rem;
+  padding: 1rem;
+}
