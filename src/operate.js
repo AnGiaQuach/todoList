@@ -75,6 +75,11 @@ function createToDoCard(data, section, mainBox) {
   todoCard.appendChild(descriptionBox);
   todoCard.appendChild(delIcon);
 
+  titleBox.addEventListener("input", () => {
+    console.log(titleBox.textContent);
+    data.title = titleBox.textContent;
+    editCard(section, data.id, data);
+  });
   return todoCard;
 }
 

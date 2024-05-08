@@ -7,7 +7,7 @@ import {
   removeToDoFromList,
 } from "./operate.js";
 
-function newToDoFromUser() {
+function newToDoFromUser(section, mainBox) {
   const newTaskBtn = document.querySelector(".new-task-icon");
   const newTaskBox = document.querySelector(".new-task-box");
   const titleInput = document.querySelector("#title");
@@ -19,9 +19,17 @@ function newToDoFromUser() {
   });
   saveBtn.addEventListener("click", () => {
     event.preventDefault();
+    const id = self.crypto.randomUUID();
+    const todoData = {
+      id: id,
+      title: titleInput.value,
+      desc: description.value,
+    };
+    let todoList = getDataFromDB("inbox");
+    todoList.push(todoData);
+    sendDataToDB("inbox", todoList);
+    mainBox.appendChild(createToDoCard(todoData, section, mainBox));
 
-    console.log(titleInput.value);
-    console.log(description.value);
     newTaskBox.classList.toggle("vanish");
   });
 }
