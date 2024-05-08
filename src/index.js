@@ -28,7 +28,7 @@ if (localStorage.getItem("inbox") === null) {
     },
   ];
   const mainBox = document.querySelector(".todo-container");
-  sendDataToDB("inbox", arr);
+  sendDataToDB("inbox", todoList);
   loadToDoList("inbox", mainBox);
   newToDoFromUser("inbox", mainBox);
 } else {
